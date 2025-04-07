@@ -3,7 +3,7 @@ import * as dotenv from "dotenv";
 import cors from "cors";
 import connectDB from "./mongodb/connect.js";
 import postRoutes from "./routes/postRoutes.js";
-import dalleRoutes from "./routes/dalleRoutes.js";
+import genRoutes from "./routes/generateRoutes.js";
 
 dotenv.config();
 
@@ -12,10 +12,10 @@ app.use(cors());
 app.use(express.json({limit:"50mb"}));
 
 app.use("/api/v1/post",postRoutes);
-app.use("/api/v1/dalle",dalleRoutes);
+app.use("/api/v1/generate",genRoutes);
 
 app.get("/",async(req,res)=>{
-    res.send("Hello from DALL-E!");
+    res.send("Hello from Image-generator");
 })
 
 const startServer=async() => 

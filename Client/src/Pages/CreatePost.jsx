@@ -21,7 +21,7 @@ const CreatePost = () => {
     if(form.prompt){
       try{
         setGeneratingImg(true);
-        const response=await fetch("http://localhost:8080/api/v1/generate",
+        const response=await fetch("https://ai-image-generator-peau.onrender.com/api/v1/generate",
         {
           method:"POST",
           headers:{
@@ -50,7 +50,7 @@ const CreatePost = () => {
       setLoading(true);
 
       try{
-        const response=await fetch("http://localhost:8080/api/v1/post",{
+        const response=await fetch("https://ai-image-generator-peau.onrender.com/api/v1/post",{
           method:"POST",
           headers:{
             "Content-Type":"application/json",
@@ -83,7 +83,7 @@ const CreatePost = () => {
       </h1>
       <p className='mt-2 text-[#666e75] text-[16px] max-w[500px]'>
         Create imaginative and visually stunning images
-        through  DALL-E AI and share them with the Community</p>
+        through AI and share them with the Community</p>
       </div>
       <form className='mt-16 max-w-3xl' onSubmit={handleSubmit}>
         <div className='flex flex-col gap-5'>

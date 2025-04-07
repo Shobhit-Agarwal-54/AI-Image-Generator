@@ -9,7 +9,7 @@ const App = () => {
     sm:px-8 px-4 py-4 border-b border-b-[#e6ebf4]'>
       <Link to="/">
         <img src={logo} alt='logo'
-        className='w-28 object-contain'/>
+        className='w-28 rounded-2xl object-contain'/>
       </Link>
       <Link to="/create-post"
       className="font-inter font-medium bg-[#6469ff] text-white px-4
